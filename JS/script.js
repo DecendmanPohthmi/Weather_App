@@ -8,11 +8,11 @@ async function fetchWeatherData(city) {
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
-    document.getElementById("city-name").innerHTML = `<strong>City:</strong> ${data.name}`
-    document.getElementById("humidity").innerHTML = `<strong>Humidity:</strong> ${data.main.humidity}`
-    document.getElementById("pressure").innerHTML = `<strong>Pressure:</strong> ${data.main.pressure}`
-    document.getElementById("temperature").innerHTML = `<strong>Temperature:</strong> ${data.main.temp}℃`
-    document.getElementById("weather-description").innerHTML = `<strong>Description:</strong> ${data.weather[0].description}`
+    document.getElementById("city-name").innerHTML = `📍 <strong>City:</strong> ${data.name}`
+    document.getElementById("humidity").innerHTML = `💧 <strong>Humidity:</strong> ${data.main.humidity}`
+    document.getElementById("pressure").innerHTML = `🌪️ <strong>Pressure:</strong> ${data.main.pressure}`
+    document.getElementById("temperature").innerHTML = `🌡️ <strong>Temperature:</strong> ${data.main.temp}℃`
+    document.getElementById("weather-description").innerHTML = `☁️ <strong>Description:</strong> ${data.weather[0].description}`
   } catch (error) {
     console.error("Error fetching weather data:", error);
   }

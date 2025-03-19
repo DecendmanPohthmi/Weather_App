@@ -1,3 +1,4 @@
+/* General body styling */
 body {
   margin: 0;
   padding: 0;
@@ -9,78 +10,149 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
+/* Main container styling */
 .container {
-  width: 50%;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  width: 60%;
+  max-width: 800px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for container */
+.container:hover {
+  transform: scale(1.03);
 }
 
 /* Header styling */
 h1 {
-  color: #333;
-}
-
-/* Input and button */
-.search-box {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 32px;
   margin-bottom: 20px;
 }
 
-input {
-  padding: 10px;
-  width: 60%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Search box styling */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
 }
 
+input {
+  padding: 12px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Input focus effect */
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
+}
+
+/* Button styling */
 button {
-  padding: 10px;
+  padding: 12px 20px;
   background: #007bff;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
   background: #0056b3;
+  transform: scale(1.05);
 }
 
-/* Weather information */
+/* Weather information styling */
 .weather-info {
   font-size: 18px;
   color: #333;
   margin-top: 20px;
+  line-height: 1.6;
 }
 
-/* Style each weather info */
+/* Style each weather section */
+.forecast-item {
+  background: rgba(240, 240, 240, 0.9);
+  border-left: 5px solid #007bff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for forecast items */
+.forecast-item:hover {
+  background: #f0f0f0;
+  transform: translateX(10px);
+}
+
+/* Date styling */
+.forecast-item p {
+  margin: 5px 0;
+}
+
+/* City name */
 #city-name {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
   color: #2c3e50;
+  text-align: center;
 }
 
+/* Temperature styling */
+#temperature {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+/* Humidity styling */
 #humidity {
   font-size: 18px;
   color: #3498db;
 }
 
+/* Pressure styling */
 #pressure {
   font-size: 18px;
   color: #e74c3c;
 }
 
-#temperature {
-  font-size: 20px;
-  font-weight: bold;
-  color: #f39c12;
-}
-
+/* Weather description styling */
 #weather-description {
   font-size: 18px;
   font-style: italic;
   color: #27ae60;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input {
+    width: 65%;
+  }
+
+  button {
+    padding: 10px 15px;
+  }
 }

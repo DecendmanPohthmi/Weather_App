@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Weather App</title>
-  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="../CSS/style.css" />
 </head>
 <body>
   <div class="container">
     <h1>Weather App</h1>
+
     <div class="search-box">
-      <input type="text" id="city-input" placeholder="Enter city name">
-      <button id="search-btn">Search</button>
+      <input type="text" id="city-input" placeholder="Enter city name" />
+      <button class="button1" id="search-btn">Search</button>
+      <button class="button1" id="add-favorite">☆ Favorite</button>
     </div>
-    <div class="weather-info" id="weather-container">
+
+    <div class="unit-toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="unit-toggle" />
+        <span class="slider round"></span>
+      </label>
+      <span class="toggle-label">°C / °F</span>
     </div>
+
+    <div class="location-box">
+      <button class="button2" onclick="getLocation()">
+        <img src="location.png" alt="" height="30px"> My Location
+      </button>
+    </div>
+
+    <h2>Favorites:</h2>
+    <ul id="favorites-list"></ul>
+
+    <div class="weather-info" id="weather-container"></div>
   </div>
-  <script src="/JS/script.js"></script>
+
+  <script src="../JS/script.js"></script>
 </body>
 </html>
